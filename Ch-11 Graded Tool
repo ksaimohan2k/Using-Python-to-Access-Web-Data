@@ -1,0 +1,10 @@
+import re
+count = 0
+name = input("Enter the File Name: ")
+handle = open(name)
+for line in handle:
+		x = re.findall("[0-9]+",line)
+		for snum in x:
+			num = int(snum)
+			count +=num
+print(count)
